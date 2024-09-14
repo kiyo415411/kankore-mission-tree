@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/kankore-mission-tree/static/css/main.53ea960c.css",
-    "main.js": "/kankore-mission-tree/static/js/main.d4673b97.js",
+    "main.js": "/kankore-mission-tree/static/js/main.cf56e0af.js",
     "index.html": "/kankore-mission-tree/index.html",
     "main.53ea960c.css.map": "/kankore-mission-tree/static/css/main.53ea960c.css.map",
-    "main.d4673b97.js.map": "/kankore-mission-tree/static/js/main.d4673b97.js.map"
+    "main.cf56e0af.js.map": "/kankore-mission-tree/static/js/main.cf56e0af.js.map"
   },
   "entrypoints": [
     "static/css/main.53ea960c.css",
-    "static/js/main.d4673b97.js"
+    "static/js/main.cf56e0af.js"
   ]
 }
