@@ -1,0 +1,379 @@
+[
+	{
+		"id": "A7-A14",
+		"source": "A7",
+		"target": "A14",
+		"sourceHandle": "bottom",
+		"targetHandle": "top",
+		"type": "Edge",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 15,
+			"height": 15
+		}
+	},
+	{
+		"id": "A8-A17",
+		"source": "A8",
+		"target": "A17",
+		"sourceHandle": "bottom",
+		"targetHandle": "top",
+		"type": "Edge",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 15,
+			"height": 15
+		}
+	},
+	{
+		"id": "A12-A13",
+		"source": "A12",
+		"target": "A13",
+		"sourceHandle": "bottom",
+		"targetHandle": "top",
+		"type": "Edge",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 15,
+			"height": 15
+		}
+	},
+	{
+		"id": "A13-A19",
+		"source": "A13",
+		"target": "A19",
+		"sourceHandle": "bottom",
+		"targetHandle": "top",
+		"type": "Edge",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 15,
+			"height": 15
+		}
+	},
+	{
+		"id": "A13-A20",
+		"source": "A13",
+		"target": "A20",
+		"sourceHandle": "bottom",
+		"targetHandle": "top",
+		"type": "Edge",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 15,
+			"height": 15
+		}
+	},
+	{
+		"id": "A14-A15",
+		"source": "A14",
+		"target": "A15",
+		"sourceHandle": "bottom",
+		"targetHandle": "top",
+		"type": "Edge",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 15,
+			"height": 15
+		}
+	},
+	{
+		"id": "A15-A16",
+		"source": "A15",
+		"target": "A16",
+		"sourceHandle": "bottom",
+		"targetHandle": "top",
+		"type": "Edge",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 15,
+			"height": 15
+		}
+	},
+	{
+		"id": "A16-A18",
+		"source": "A16",
+		"target": "A18",
+		"sourceHandle": "bottom",
+		"targetHandle": "top",
+		"type": "Edge",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 15,
+			"height": 15
+		}
+	},
+	{
+		"id": "A20-B11",
+		"source": "A20",
+		"target": "B11",
+		"sourceHandle": "bottom",
+		"targetHandle": "top",
+		"type": "Edge",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 15,
+			"height": 15
+		}
+	},
+	{
+		"id": "A3-A4",
+		"source": "A3",
+		"target": "A4",
+		"sourceHandle": "bottom",
+		"targetHandle": "top",
+		"type": "Edge",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 15,
+			"height": 15
+		}
+	},
+	{
+		"id": "A3-A5",
+		"source": "A3",
+		"target": "A5",
+		"sourceHandle": "bottom",
+		"targetHandle": "top",
+		"type": "Edge",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 15,
+			"height": 15
+		}
+	},
+	{
+		"id": "A4-A6",
+		"source": "A4",
+		"target": "A6",
+		"sourceHandle": "bottom",
+		"targetHandle": "top",
+		"type": "Edge",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 15,
+			"height": 15
+		}
+	},
+	{
+		"id": "A4-A9",
+		"source": "A4",
+		"target": "A9",
+		"sourceHandle": "bottom",
+		"targetHandle": "top",
+		"type": "Edge",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 15,
+			"height": 15
+		}
+	},
+	{
+		"id": "A5-A7",
+		"source": "A5",
+		"target": "A7",
+		"sourceHandle": "bottom",
+		"targetHandle": "top",
+		"type": "Edge",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 15,
+			"height": 15
+		}
+	},
+	{
+		"id": "A5-A8",
+		"source": "A5",
+		"target": "A8",
+		"sourceHandle": "bottom",
+		"targetHandle": "top",
+		"type": "Edge",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 15,
+			"height": 15
+		}
+	},
+	{
+		"id": "A6-B3",
+		"source": "A6",
+		"target": "B3",
+		"sourceHandle": "bottom",
+		"targetHandle": "top",
+		"type": "Edge",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 15,
+			"height": 15
+		}
+	},
+	{
+		"id": "A7-A12",
+		"source": "A7",
+		"target": "A12",
+		"sourceHandle": "bottom",
+		"targetHandle": "top",
+		"type": "Edge",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 15,
+			"height": 15
+		}
+	},
+	{
+		"id": "A9-A10",
+		"source": "A9",
+		"target": "A10",
+		"sourceHandle": "bottom",
+		"targetHandle": "top",
+		"type": "Edge",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 15,
+			"height": 15
+		}
+	},
+	{
+		"id": "A11-B10",
+		"source": "A11",
+		"target": "B10",
+		"sourceHandle": "bottom",
+		"targetHandle": "top",
+		"type": "Edge",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 15,
+			"height": 15
+		}
+	},
+	{
+		"id": "B3-A11",
+		"source": "B3",
+		"target": "A11",
+		"sourceHandle": "bottom",
+		"targetHandle": "top",
+		"type": "Edge",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 15,
+			"height": 15
+		}
+	},
+	{
+		"id": "B1-B2",
+		"source": "B1",
+		"target": "B2",
+		"sourceHandle": "bottom",
+		"targetHandle": "top",
+		"type": "Edge",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 15,
+			"height": 15
+		}
+	},
+	{
+		"id": "B2-B4",
+		"source": "B2",
+		"target": "B4",
+		"sourceHandle": "bottom",
+		"targetHandle": "top",
+		"type": "Edge",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 15,
+			"height": 15
+		}
+	},
+	{
+		"id": "B4-B5",
+		"source": "B4",
+		"target": "B5",
+		"sourceHandle": "bottom",
+		"targetHandle": "top",
+		"type": "Edge",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 15,
+			"height": 15
+		}
+	},
+	{
+		"id": "B5-B6",
+		"source": "B5",
+		"target": "B6",
+		"sourceHandle": "bottom",
+		"targetHandle": "top",
+		"type": "Edge",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 15,
+			"height": 15
+		}
+	},
+	{
+		"id": "B6-B7",
+		"source": "B6",
+		"target": "B7",
+		"sourceHandle": "bottom",
+		"targetHandle": "top",
+		"type": "Edge",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 15,
+			"height": 15
+		}
+	},
+	{
+		"id": "B7-B8",
+		"source": "B7",
+		"target": "B8",
+		"sourceHandle": "bottom",
+		"targetHandle": "top",
+		"type": "Edge",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 15,
+			"height": 15
+		}
+	},
+	{
+		"id": "B8-B9",
+		"source": "B8",
+		"target": "B9",
+		"sourceHandle": "bottom",
+		"targetHandle": "top",
+		"type": "Edge",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 15,
+			"height": 15
+		}
+	},
+	{
+		"id": "A1-A2",
+		"source": "A1",
+		"target": "A2",
+		"sourceHandle": "bottom",
+		"targetHandle": "top",
+		"type": "Edge",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 15,
+			"height": 15
+		}
+	},
+	{
+		"id": "A2-A3",
+		"source": "A2",
+		"target": "A3",
+		"sourceHandle": "bottom",
+		"targetHandle": "top",
+		"type": "Edge",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 15,
+			"height": 15
+		}
+	}
+]

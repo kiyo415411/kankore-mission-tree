@@ -1,0 +1,503 @@
+[
+  {
+    "id": "A13",
+    "position": {
+      "x": 461.5,
+      "y": 900
+    },
+    "data": {
+      "label": "戦艦と重巡による主力艦隊を編成せよ！",
+      "bgColor": "#769FCD"
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 339,
+      "height": 54
+    }
+  },
+  {
+    "id": "A14",
+    "position": {
+      "x": 966,
+      "y": 750
+    },
+    "data": {
+      "label": "「川内」型軽巡姉妹の全3艦を編成せよ！",
+      "bgColor": "#769FCD"
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 349,
+      "height": 54
+    }
+  },
+  {
+    "id": "A15",
+    "position": {
+      "x": 966,
+      "y": 900
+    },
+    "data": {
+      "label": "「妙高」型重巡姉妹の全4隻を編成せよ！",
+      "bgColor": "#769FCD"
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 349,
+      "height": 54
+    }
+  },
+  {
+    "id": "A16",
+    "position": {
+      "x": 955,
+      "y": 1050
+    },
+    "data": {
+      "label": "「金剛」型による高速戦艦部隊を編成せよ！",
+      "bgColor": "#769FCD"
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 371,
+      "height": 54
+    }
+  },
+  {
+    "id": "A17",
+    "position": {
+      "x": 1365,
+      "y": 750
+    },
+    "data": {
+      "label": "「扶桑」型戦艦姉妹の全2隻を編成せよ！",
+      "bgColor": "#769FCD"
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 349,
+      "height": 54
+    }
+  },
+  {
+    "id": "A18",
+    "position": {
+      "x": 966,
+      "y": 1200
+    },
+    "data": {
+      "label": "「伊勢」型戦艦姉妹の全2隻を編成せよ！",
+      "bgColor": "#769FCD"
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 349,
+      "height": 54
+    }
+  },
+  {
+    "id": "A19",
+    "position": {
+      "x": 303,
+      "y": 1050
+    },
+    "data": {
+      "label": "「南雲機動部隊」を編成せよ！",
+      "bgColor": "#769FCD"
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 275,
+      "height": 54
+    }
+  },
+  {
+    "id": "A20",
+    "position": {
+      "x": 620,
+      "y": 1050
+    },
+    "data": {
+      "label": "「三川艦隊」を編成せよ！",
+      "bgColor": "#769FCD"
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 243,
+      "height": 54
+    }
+  },
+  {
+    "id": "B11",
+    "position": {
+      "x": 628,
+      "y": 1200
+    },
+    "data": {
+      "label": "「三川艦隊」出撃せよ！",
+      "bgColor": "#CD7690"
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 227,
+      "height": 54
+    }
+  },
+  {
+    "id": "A4",
+    "position": {
+      "x": 125,
+      "y": 450
+    },
+    "data": {
+      "label": "6隻編成の艦隊を編成せよ！",
+      "bgColor": "#769FCD"
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 253,
+      "height": 54
+    }
+  },
+  {
+    "id": "A5",
+    "position": {
+      "x": 1051.375,
+      "y": 450
+    },
+    "data": {
+      "label": "軽巡2隻を擁する隊を編成せよ！",
+      "bgColor": "#769FCD"
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 285,
+      "height": 54
+    }
+  },
+  {
+    "id": "A6",
+    "position": {
+      "x": -5,
+      "y": 600
+    },
+    "data": {
+      "label": "第2艦隊を編成せよ！",
+      "bgColor": "#769FCD"
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 205,
+      "height": 54
+    }
+  },
+  {
+    "id": "A7",
+    "position": {
+      "x": 704,
+      "y": 548
+    },
+    "data": {
+      "label": "「重巡戦隊」を編成せよ！",
+      "bgColor": "#769FCD",
+      "isDragHintMsg": false
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 243,
+      "height": 54
+    },
+    "selected": false,
+    "dragging": false
+  },
+  {
+    "id": "A8",
+    "position": {
+      "x": 1365,
+      "y": 600
+    },
+    "data": {
+      "label": "「天龍」型軽巡姉妹の全2艦を編成せよ！",
+      "bgColor": "#769FCD"
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 349,
+      "height": 54
+    }
+  },
+  {
+    "id": "A9",
+    "position": {
+      "x": 255,
+      "y": 600
+    },
+    "data": {
+      "label": "「水上機母艦」を配備せよ！",
+      "bgColor": "#769FCD"
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 259,
+      "height": 54
+    }
+  },
+  {
+    "id": "A10",
+    "position": {
+      "x": 255,
+      "y": 750
+    },
+    "data": {
+      "label": "「第六駆逐隊」を編成せよ！",
+      "bgColor": "#769FCD"
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 259,
+      "height": 54
+    }
+  },
+  {
+    "id": "A11",
+    "position": {
+      "x": -61,
+      "y": 900
+    },
+    "data": {
+      "label": "第2艦隊で空母機動部隊を編成せよ！",
+      "bgColor": "#769FCD"
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 317,
+      "height": 54
+    }
+  },
+  {
+    "id": "A12",
+    "position": {
+      "x": 509.5,
+      "y": 750
+    },
+    "data": {
+      "label": "空母機動部隊を編成せよ！",
+      "bgColor": "#769FCD"
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 243,
+      "height": 54
+    }
+  },
+  {
+    "id": "B3",
+    "position": {
+      "x": -5,
+      "y": 750
+    },
+    "data": {
+      "label": "第2艦隊、出撃せよ！",
+      "bgColor": "#CD7690"
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 205,
+      "height": 54
+    }
+  },
+  {
+    "id": "B1",
+    "position": {
+      "x": 1735,
+      "y": 0
+    },
+    "data": {
+      "label": "はじめての「出撃」！",
+      "bgColor": "#CD7690",
+      "isFlipped": false
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 211,
+      "height": 54
+    },
+    "selected": true
+  },
+  {
+    "id": "B2",
+    "position": {
+      "x": 1727,
+      "y": 150
+    },
+    "data": {
+      "label": "鎮守府正面海域を護れ！",
+      "bgColor": "#CD7690"
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 227,
+      "height": 54
+    }
+  },
+  {
+    "id": "B4",
+    "position": {
+      "x": 1727,
+      "y": 300
+    },
+    "data": {
+      "label": "南西諸島沖に出撃せよ！",
+      "bgColor": "#CD7690"
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 227,
+      "height": 54
+    }
+  },
+  {
+    "id": "B5",
+    "position": {
+      "x": 1679,
+      "y": 450
+    },
+    "data": {
+      "label": "接近する「敵前衛艦隊」を迎撃せよ！",
+      "bgColor": "#CD7690"
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 323,
+      "height": 54
+    }
+  },
+  {
+    "id": "B6",
+    "position": {
+      "x": 1719,
+      "y": 600
+    },
+    "data": {
+      "label": "「水雷戦隊」で出撃せよ！",
+      "bgColor": "#CD7690"
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 243,
+      "height": 54
+    }
+  },
+  {
+    "id": "B7",
+    "position": {
+      "x": 1711,
+      "y": 750
+    },
+    "data": {
+      "label": "「重巡洋艦」を出撃させよ！",
+      "bgColor": "#CD7690"
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 259,
+      "height": 54
+    }
+  },
+  {
+    "id": "B8",
+    "position": {
+      "x": 1727,
+      "y": 900
+    },
+    "data": {
+      "label": "「戦艦」を出撃させよ！",
+      "bgColor": "#CD7690"
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 227,
+      "height": 54
+    }
+  },
+  {
+    "id": "B9",
+    "position": {
+      "x": 1711,
+      "y": 1050
+    },
+    "data": {
+      "label": "「空母機動部隊」出撃せよ！",
+      "bgColor": "#CD7690"
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 259,
+      "height": 54
+    }
+  },
+  {
+    "id": "B10",
+    "position": {
+      "x": 0,
+      "y": 1050
+    },
+    "data": {
+      "label": "敵空母を撃沈せよ！",
+      "bgColor": "#CD7690"
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 195,
+      "height": 54
+    }
+  },
+  {
+    "id": "A1",
+    "position": {
+      "x": 604.1875,
+      "y": 0
+    },
+    "data": {
+      "label": "はじめての「編成」！",
+      "bgColor": "#769FCD"
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 211,
+      "height": 54
+    }
+  },
+  {
+    "id": "A2",
+    "position": {
+      "x": 596.1875,
+      "y": 150
+    },
+    "data": {
+      "label": "「駆逐隊」を編成せよ！",
+      "bgColor": "#769FCD"
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 227,
+      "height": 54
+    }
+  },
+  {
+    "id": "A3",
+    "position": {
+      "x": 588.1875,
+      "y": 300
+    },
+    "data": {
+      "label": "「水雷戦隊」を編成せよ！",
+      "bgColor": "#769FCD"
+    },
+    "type": "FlipRectangleNode",
+    "measured": {
+      "width": 243,
+      "height": 54
+    }
+  }
+]
