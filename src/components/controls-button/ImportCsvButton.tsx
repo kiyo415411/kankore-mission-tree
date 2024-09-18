@@ -1,35 +1,19 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import Icon from '@mui/material/Icon';
 import Tooltip from '@mui/material/Tooltip';
-import { ConnectionLineType, ControlButton, MarkerType, useReactFlow } from '@xyflow/react';
+import { ControlButton, MarkerType, useReactFlow } from '@xyflow/react';
 import Papa from 'papaparse';
 import { Node, Edge } from '@xyflow/react';
 
 interface CSVRow {
 	id: string;
 	label: string;
-	bgColor: string;
 	[key: string]: string;
 }
 
-const HANDLE_PAIRS: Record<string, [string, string]> = {
-	lr: ['right', 'left'],
-	rl: ['left', 'right'],
-	bt: ['bottom', 'top'],
-	tb: ['top', 'bottom'],
-	br: ['bottom', 'right'],
-	bl: ['bottom', 'left'],
-	tr: ['top', 'right'],
-	tl: ['top', 'left'],
-	rb: ['right', 'bottom'],
-	rt: ['right', 'top'],
-	lb: ['left', 'bottom'],
-	lt: ['left', 'top']
-};
-
 function ImportCsvButton() {
 	const fileInputRef = useRef<HTMLInputElement>(null);
-	const { setNodes, setEdges, getNodes } = useReactFlow();
+	const { setNodes, setEdges, getNodes, getEdges } = useReactFlow();
 	const [isInitd, setIsInitd] = useState(false);
 	const [nodeConnections, setNodeConnections] = useState<Record<string, string[]>>({});
 	const [savedNodePositions, setSavedNodePositions] = useState<Record<string, { x: number; y: number }>>(() => {
@@ -39,6 +23,18 @@ function ImportCsvButton() {
 		});
 		return positions;
 	});
+	const [savedEdges, setSavedEdges] = useState<Edge[]>([]);
+
+	const bgColorRules: Record<string, string> = {
+		A: '#769FCD',
+		B: '#CD7690',
+		C: '#76cd87',
+		D: '#8f76cd',
+		E: '#bdcd76',
+		F: '#cdb476',
+		G: '#9476cd',
+		W: '#cd76cc'
+	};
 
 	const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
 		setIsInitd(false);
@@ -49,6 +45,9 @@ function ImportCsvButton() {
 			currentPositions[node.id] = node.position;
 		});
 		setSavedNodePositions(currentPositions);
+
+		const currentEdges = getEdges();
+		setSavedEdges(currentEdges);
 
 		const file = event.target.files?.[0];
 		if (!file) return;
@@ -76,23 +75,29 @@ function ImportCsvButton() {
 
 	const generateNodesAndConnections = (rows: CSVRow[], nodeBox: Node[], connections: Record<string, string[]>) => {
 		rows.forEach(row => {
+			if (row.isDisabled === '1') return; // 如果 isDisabled 為 '1'，則跳過該節點
+
+			let bgColor = row.bgColor;
+			for (const [key, color] of Object.entries(bgColorRules)) {
+				if (row.id.includes(key)) {
+					bgColor = color;
+					break;
+				}
+			}
+
 			nodeBox.push({
 				id: row.id,
 				position: { x: 0, y: 0 },
-				data: { label: row.label, bgColor: row.bgColor, isLocked: row.isLocked },
+				data: { label: row.label, bgColor, isLocked: row.isLocked },
 				type: 'FlipRectangleNode'
 			});
 
 			Object.entries(row).forEach(([key, value]) => {
-				if (key.startsWith('target_') && !key.endsWith('_path') && value) {
-					const pathKey = `${key}_path`;
-					const path = row[pathKey] as string;
-					if (path === 'bt') {
-						if (!connections[row.id]) {
-							connections[row.id] = [];
-						}
-						connections[row.id].push(value);
+				if (key.startsWith('source_') && value) {
+					if (!connections[value]) {
+						connections[value] = [];
 					}
+					connections[value].push(row.id);
 				}
 			});
 		});
@@ -120,7 +125,7 @@ function ImportCsvButton() {
 				Object.values(nodePositions).some(pos => {
 					const existingNodeId = Object.keys(nodePositions).find(id => nodePositions[id].x === pos.x);
 					const existingNodeWidth = existingNodeId ? nodeWidths[existingNodeId] : 0;
-					return Math.abs(pos.x - currentX) < (existingNodeWidth + (nodeWidths[rootNodeId] || 0)) / 2 + 50;
+					return Math.abs(pos.x - currentX) < (existingNodeWidth + (nodeWidths[rootNodeId] || 0)) / 2 + 100;
 				})
 			) {
 				currentX += 100;
@@ -150,20 +155,21 @@ function ImportCsvButton() {
 		const edges: Edge[] = [];
 		rows.forEach(row => {
 			Object.entries(row).forEach(([key, value]) => {
-				if (key.startsWith('target_') && !key.endsWith('_path') && value) {
-					const pathKey = `${key}_path`;
-					const path = row[pathKey] as string;
-					const [sourceHandle, targetHandle] = HANDLE_PAIRS[path] || HANDLE_PAIRS['bt'];
-
-					edges.push({
-						id: `${row.id}-${value}`,
-						source: row.id,
-						target: value,
-						sourceHandle,
-						targetHandle,
-						type: 'Edge',
-						markerEnd: { type: MarkerType.ArrowClosed, width: 15, height: 15 }
-					});
+				if (key.startsWith('source_') && value) {
+					const existingEdge = savedEdges.find(edge => edge.source === value && edge.target === row.id);
+					if (existingEdge && row.isLocked === '1') {
+						edges.push(existingEdge);
+					} else {
+						edges.push({
+							id: `${value}-${row.id}`,
+							source: value,
+							target: row.id,
+							sourceHandle: 'bottom',
+							targetHandle: 'top',
+							type: 'Edge',
+							markerEnd: { type: MarkerType.ArrowClosed, width: 30, height: 30 }
+						});
+					}
 				}
 			});
 		});
@@ -180,30 +186,56 @@ function ImportCsvButton() {
 	) => {
 		if (nodePositions[nodeId]) return;
 
-		nodePositions[nodeId] = { x, y };
-		const children = nodeConnections[nodeId] || [];
-		let childX = x;
+		const node = getNodes().find(n => n.id === nodeId);
+		const isLocked = node?.data.isLocked === '1';
 
-		children.forEach(childId => {
-			calculatePositions(nodePositions, nodeConnections, nodeWidths, childId, childX, y + 150);
-			childX += (nodeWidths[childId] || 0) + 50;
-		});
-
-		if (children.length > 0) {
-			const leftmostChild = nodePositions[children[0]];
-			const rightmostChild = nodePositions[children[children.length - 1]];
-			nodePositions[nodeId].x = (leftmostChild.x + rightmostChild.x) / 2;
+		if (isLocked && savedNodePositions[nodeId]) {
+			nodePositions[nodeId] = savedNodePositions[nodeId];
+		} else {
+			nodePositions[nodeId] = { x, y };
 		}
 
-		nodePositions[nodeId].y = y;
+		const children = nodeConnections[nodeId] || [];
+		let childX = nodePositions[nodeId].x - (children.length - 1) * 75;
 
+		children.forEach(childId => {
+			calculatePositions(
+				nodePositions,
+				nodeConnections,
+				nodeWidths,
+				childId,
+				childX,
+				nodePositions[nodeId].y + 150
+			);
+			childX += (nodeWidths[childId] || 0) + 100;
+		});
+
+		// 重新调整子节点位置以避免重叠
+		children.forEach(childId => {
+			const childNode = nodePositions[childId];
+			Object.keys(nodePositions).forEach(existingNodeId => {
+				if (existingNodeId !== childId && nodePositions[existingNodeId].y === childNode.y) {
+					const existingNodeX = nodePositions[existingNodeId].x;
+					const existingNodeWidth = nodeWidths[existingNodeId] || 0;
+					const currentNodeWidth = nodeWidths[childId] || 0;
+					if (Math.abs(existingNodeX - childNode.x) < (existingNodeWidth + currentNodeWidth) / 2 + 100) {
+						childNode.x = existingNodeX + (existingNodeWidth + currentNodeWidth) / 2 + 100;
+					}
+				}
+			});
+		});
+
+		// 原有的避免重叠逻辑
 		Object.keys(nodePositions).forEach(existingNodeId => {
 			if (existingNodeId !== nodeId && nodePositions[existingNodeId].y === y) {
 				const existingNodeX = nodePositions[existingNodeId].x;
 				const existingNodeWidth = nodeWidths[existingNodeId] || 0;
 				const currentNodeWidth = nodeWidths[nodeId] || 0;
-				if (Math.abs(existingNodeX - nodePositions[nodeId].x) < (existingNodeWidth + currentNodeWidth) / 2) {
-					nodePositions[nodeId].x = existingNodeX + (existingNodeWidth + currentNodeWidth) / 2 + 50;
+				if (
+					Math.abs(existingNodeX - nodePositions[nodeId].x) <
+					(existingNodeWidth + currentNodeWidth) / 2 + 100
+				) {
+					nodePositions[nodeId].x = existingNodeX + (existingNodeWidth + currentNodeWidth) / 2 + 100;
 				}
 			}
 		});

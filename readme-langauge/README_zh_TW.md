@@ -1,8 +1,8 @@
 # 語言選擇
 
--   [English](./README.md) (原始)
--   [繁體中文](./readme-langauge/README-zh-TW.md) (繁體中文)
--   [日本語](./readme-langauge/README-ja.md) (日文)
+-   [English](../README.md) (原始)
+-   [繁體中文](./README_zh_TW.md) (繁體中文)
+-   [日本語](./README_ja.md) (日文)
 
 ---
 
@@ -21,7 +21,6 @@
 -   位於左下角的功能欄：
     1. **放大**：放大當前視圖。
     2. **縮小**：縮小當前視圖。
-    3. **適應所有節點**：調整視圖以適應當前視口中的所有節點。
 
 ## 管理模式功能
 
@@ -43,18 +42,17 @@
 
 -   **id**：節點標識符。
 -   **label**：任務名稱。
--   **bgColor**：節點顏色。
--   **isLocked**：如果節點已存在，鎖定其原始位置。
--   **target_n**：子節點標識符。
--   **target_n_path**：連接方法（目前支持 `bottom` 到 `top` (`bt`) 和 `right` 到 `left` (`rl`)）。
+-   **isLocked**: .
+-   **isDisabled**: .
+-   **source_n**：子節點標識符。
 
 ### 示例 CSV
 
 ```
-id,label,bgColor,isLocked,target_1,target_1_path,target_2,target_2_path
-A1,はじめての「編成」！,#769FCD,1,A2,bt,,
-A2,「駆逐隊」を編成せよ！,#769FCD,0,A3,bt,,
-A3,「水雷戦隊」を編成せよ！,#769FCD,0,A4,bt,A5,bt
+id,label,isLocked,isDisabled,source_1,source_2,source_3
+A1,はじめての「編成」！,0,0,,,
+A2,「駆逐隊」を編成せよ！,0,0,A1,,
+A3,「水雷戦隊」を編成せよ！,0,0,A2,,
 ```
 
 # 開發

@@ -59,8 +59,8 @@ export function useFlowState() {
 			type: 'Edge',
 			markerEnd: {
 				type: MarkerType.ArrowClosed,
-				width: 15,
-				height: 15
+				width: 30,
+				height: 30
 			}
 		};
 		setEdges(eds => addEdge(newEdge, eds));

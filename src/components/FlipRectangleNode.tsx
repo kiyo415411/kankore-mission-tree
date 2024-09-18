@@ -29,7 +29,7 @@ const FlipRectangleNode = ({ id, data }: { id: string; data: NodeData }) => {
 	};
 
 	const nodeContent = (
-		<div style={{ perspective: '1000px' }} className="w-auto min-w-96 h-30 rounded-8">
+		<div style={{ perspective: '1000px', width: 240 }} className="h-48 rounded-8">
 			<div
 				className="w-full h-full relative rounded-8"
 				style={{
@@ -42,7 +42,7 @@ const FlipRectangleNode = ({ id, data }: { id: string; data: NodeData }) => {
 			>
 				<div
 					className={clsx(
-						'w-full h-full rounded-8 flex flex-col justify-center items-center px-16 whitespace-no-wrap relative py-2'
+						'w-full h-full rounded-8 flex flex-col justify-center items-center whitespace-no-wrap relative'
 					)}
 					style={{
 						transform: isFlipped ? 'rotateX(180deg)' : 'rotateX(0deg)',
@@ -60,7 +60,9 @@ const FlipRectangleNode = ({ id, data }: { id: string; data: NodeData }) => {
 						/>
 					)}
 					<span className="relative z-10">{id}</span>
-					<span className="relative z-10">{data.label}</span>
+					<pre className="relative z-10 whitespace-pre-wrap overflow-auto max-w-full text-center px-8">
+						{data.label}
+					</pre>
 				</div>
 			</div>
 

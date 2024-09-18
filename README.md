@@ -1,8 +1,8 @@
 # Language Selection
 
 -   [English](./README.md) (Original)
--   [繁體中文](./readme-langauge/README-zh-TW.md) (Traditional Chinese)
--   [日本語](./readme-langauge/README-ja.md) (Japanese)
+-   [繁體中文](./readme-langauge/README_zh_TW.md) (Traditional Chinese)
+-   [日本語](./readme-langauge/README_ja.md) (Japanese)
 
 ---
 
@@ -21,7 +21,6 @@ Kankore Mission Tree/Map allows admirals to view their current missions, click t
 -   Function bar located at the bottom left:
     1. **Zoom In**: Magnify the current view.
     2. **Zoom Out**: Reduce the current view.
-    3. **Fit All Nodes**: Adjust the view to fit all nodes within the current viewport.
 
 ## Admin Mode Features
 
@@ -48,16 +47,16 @@ The CSV file used for importing tasks should follow this structure:
 -   **label**: Task name.
 -   **bgColor**: Node color.
 -   **isLocked**: If the node already exists, lock its original position.
--   **target_n**: Child node identifiers.
--   **target_n_path**: Connection method for the link (currently supports `bottom` to `top` (`bt`) and `right` to `left` (`rl`)).
+-   **isDisabled**: .
+-   **source_n**: Child node identifiers.
 
 ### Example CSV
 
 ```
-id,label,bgColor,isLocked,target_1,target_1_path,target_2,target_2_path
-A1,はじめての「編成」！,#769FCD,1,A2,bt,,
-A2,「駆逐隊」を編成せよ！,#769FCD,0,A3,bt,,
-A3,「水雷戦隊」を編成せよ！,#769FCD,0,A4,bt,A5,bt
+id,label,isLocked,isDisabled,source_1,source_2,source_3
+A1,はじめての「編成」！,0,0,,,
+A2,「駆逐隊」を編成せよ！,0,0,A1,,
+A3,「水雷戦隊」を編成せよ！,0,0,A2,,
 ```
 
 # Development

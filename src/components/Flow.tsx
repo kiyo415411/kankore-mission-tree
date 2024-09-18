@@ -93,7 +93,7 @@ function Flow() {
 					onEdgesChange={isAdmin ? handleEdgesChange : undefined}
 					onConnect={isAdmin ? onConnect : undefined}
 					onReconnect={isAdmin ? onReconnect : undefined}
-					connectionLineType={ConnectionLineType.Step}
+					connectionLineType={ConnectionLineType.SmoothStep}
 					nodesConnectable={isAdmin}
 					nodesDraggable={isAdmin}
 					snapToGrid

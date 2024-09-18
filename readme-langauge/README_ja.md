@@ -1,8 +1,8 @@
 # 言語選択
 
--   [English](./README.md) (オリジナル)
--   [繁體中文](./readme-langauge/README-zh-TW.md) (繁体字中国語)
--   [日本語](./readme-langauge/README-ja.md) (日本語)
+-   [English](../README.md) (オリジナル)
+-   [繁體中文](./README_zh_TW.md) (繁体字中国語)
+-   [日本語](./README_ja.md) (日本語)
 
 ---
 
@@ -21,7 +21,6 @@
 -   左下の機能バー：
     1. **ズームイン**：現在のビューを拡大します。
     2. **ズームアウト**：現在のビューを縮小します。
-    3. **すべてのノードをフィット**：現在のビューポート内にすべてのノードを合わせて表示します。
 
 ## 管理モードの機能
 
@@ -43,18 +42,17 @@
 
 -   **id**：ノード識別子。
 -   **label**：タスク名。
--   **bgColor**：ノードの色。
 -   **isLocked**：ノードが既に存在する場合、その元の位置をロックします。
--   **target_n**：子ノード識別子。
--   **target_n_path**：接続方法（現在は `bottom` から `top` (`bt`) と `right` から `left` (`rl`) をサポートしています）。
+-   **isDisabled**: .
+-   **source_n**：子ノード識別子。
 
 ### 例 CSV
 
 ```
-id,label,bgColor,isLocked,target_1,target_1_path,target_2,target_2_path
-A1,はじめての「編成」！,#769FCD,1,A2,bt,,
-A2,「駆逐隊」を編成せよ！,#769FCD,0,A3,bt,,
-A3,「水雷戦隊」を編成せよ！,#769FCD,0,A4,bt,A5,bt
+id,label,isLocked,isDisabled,source_1,source_2,source_3
+A1,はじめての「編成」！,0,0,,,
+A2,「駆逐隊」を編成せよ！,0,0,A1,,
+A3,「水雷戦隊」を編成せよ！,0,0,A2,,
 ```
 
 # 開発
